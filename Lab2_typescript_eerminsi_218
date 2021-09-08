@@ -1,0 +1,51 @@
+Script started on 2021-09-03 13:23:32-04:00
+bash-4.4$ uname -a
+Linux zeus-1.vse.gmu.edu 4.18.0-305.10.2.el8_4.x86_64 #1 SMP Mon Jul 12 04:43:18 EDT 2021 x86_64 x86_64 x86_64 GNU/Linux
+bash-4.4$ ls
+hello.c			     lab2_eerminsi_218_exercise1.c  lab2_eerminsi_218_exercise2.c  lab2_eerminsi_218_lab3.c	 Makefile
+lab2_eerminsi_218_exercise1  lab2_eerminsi_218_exercise2    lab2_eerminsi_218_lab3	   Lab2_typescript_eerminsi_218  test
+bash-4.4$ cat lab2_eerminsi_218_exercise1.c
+#include <stdio.h>
+
+int main(){
+	int num;
+	printf("Enter an integer: ");
+	scanf("%d", &num);
+
+	if(num%5==0 && num%7==0){
+		printf("%d is the multiple", num);
+	}
+	else{
+		printf("%d is not the multiple", num);
+	}
+	return 0;
+}
+bash-4.4$ cat MAkefile[K[K[K[K[K[K[Kakefile
+all: p1 p2 p3
+p1:
+	gcc -Wall -o e1 lab2_eerminsi_218_exercise1.c
+p2:
+	gcc -Wall -o e2 lab2_eerminsi_218_exercise2.c
+p3:
+	gcc -Wall -o e3 lab2_eerminsi_218_exercise3.c
+bash-4.4$ make
+gcc -Wall -o e1 lab2_eerminsi_218_exercise1.c
+gcc -Wall -o e2 lab2_eerminsi_218_exercise2.c
+gcc -Wall -o e3 lab2_eerminsi_218_exercise3.c
+[01m[Kgcc:[m[K [01;31m[Kerror: [m[Klab2_eerminsi_218_exercise3.c: No such file or directory
+[01m[Kgcc:[m[K [01;31m[Kfatal error: [m[Kno input files
+compilation terminated.
+make: *** [Makefile:7: p3] Error 1
+bash-4.4$ ls
+e1  hello.c			 lab2_eerminsi_218_exercise1.c	lab2_eerminsi_218_exercise2.c  lab2_eerminsi_218_lab3.c      Makefile
+e2  lab2_eerminsi_218_exercise1  lab2_eerminsi_218_exercise2	lab2_eerminsi_218_lab3	       Lab2_typescript_eerminsi_218  test
+bash-4.4$ lsmakecat Makefile[C[C[C[C[C[C[C[C[C[C[8Pmake[2Plsmakecat Makefile[K[K[K[K[K[K[K[K[K[K[K[Kmv lab2_er[Kerminsi_exer[K[K[K[Klab3.c lab2_er[Kerminsi_218_exercise3.c
+mv: cannot stat 'lab2_eerminsi_lab3.c': No such file or directory
+bash-4.4$ mv lab2_eerminsi_lab3.c lab2_eerminsi_218_exercise3.c[C[C[C[1P[1P[1P[1@2[1@1[1@8[1@_[1@l[1@a[1@b
+bash-4.4$ make
+gcc -Wall -o e1 lab2_eerminsi_218_exercise1.c
+gcc -Wall -o e2 lab2_eerminsi_218_exercise2.c
+gcc -Wall -o e3 lab2_eerminsi_218_exercise3.c
+bash-4.4$ exit
+
+Script done on 2021-09-03 13:30:09-04:00
